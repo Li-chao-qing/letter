@@ -1,0 +1,83 @@
+<html>
+<head>
+	<title></title>
+	<meta charset='utf-8'/>
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	
+	
+</head>
+<script type="text/javascript">
+window.onload=function() {
+// var arr=[0,3,4,1,8];
+// Array.prototype.order=function(){
+// 	for(var i=0;i<this.length;i++){
+// 		for(var j=i+1;j<this.length;j++){
+// 			if(this[i]<this[j]){
+// 				var temp=this[i];
+// 				this[i]=this[j];
+// 				this[j]=temp;
+// 			}
+// 		}
+// 	}
+// 	return this;
+// };
+// Array.prototype.order1=function(){
+// 	for(var i=0;i<this.length;i++){
+// 		for(var j=i+1;j<this.length;j++){
+// 			if(this[i]>this[j]){
+// 				var temp=this[i];
+// 				this[i]=this[j];
+// 				this[j]=temp;
+// 			}
+// 		}
+// 	}
+// 	return this;
+// };
+// Array.prototype.order2=function(){
+// 	var max=this[0];
+// 	var shuzu=[];
+// 	for(var i=0;i<this.length;i++){
+// 		if(max<this[i]){
+// 			max=this[i];
+// 		}
+// 	}
+// 	return this;
+// };
+// console.log(arr.sort(function(a,b){console.log(arguments);return a>b;}));
+
+var arr={name:"zhangsan",age:'24',son:{name:'xzs'}};
+
+function extend(obj){
+	/*递归*/
+	var newobj={};
+	for(var i in obj){
+		if(typeof obj[i]=='object'){
+			newobj[i]=extend(obj[i]);
+		
+		}else{
+			newobj[i]=obj[i];
+		}
+	
+
+	} 
+	return newobj;
+}
+var arr1=extend(arr);
+arr1.son.name='mm'
+console.log(arr.son.name);
+
+};
+
+</script>
+<body>
+<div name='ss'></div>
+<div></div>
+
+</body>
+</html>
+
+
+
+
+
+
